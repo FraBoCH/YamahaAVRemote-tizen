@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Yamaha Remote</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Wait screen -->
+	<div class="ui-page ui-page-active" id="processing" data-enable-page-scroll="false">
+	   <div class="ui-content content-padding">
+			<div class="small-processing-container">
+				<div class="ui-processing"></div>
+				<div class="ui-processing-text">
+					Connecting to your Yamaha AV
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main page -->
+	<div class="ui-page" id="main" data-enable-page-scroll="false">
+		<header class="ui-header">
+			<h2 class="ui-title">Yamaha Remote</h2>
+		</header>
+
+		<div class="ui-content">
+			<div class="ui-grid-col-1" style="height:76px">
+				<div id="div_volume">?? dB</div>
+			</div>
+			<div class="ui-grid-col-2" style="height:76px">
+				<div id="div_power" class="ui-switch">
+				    <label class="ui-toggleswitch">
+				        <input id="input_power" type="checkbox" class="ui-switch-input" />
+				        <div class="ui-switch-activation">
+				            <div class="ui-switch-inneroffset">
+				                <div class="ui-switch-handler"></div>
+				            </div>
+				        </div>
+				    </label>
+				</div>
+				<a id="div_input" class="ui-btn" href="#input">-</a>
+			</div>
+        </div>
+        <progress class="ui-circle-progress" id="circleprogress" max="100" value="50"></progress>
+	</div>
+	
+	<!-- Config page -->
+	<div class="ui-page" id="config" data-enable-page-scroll="false">
+		<header class="ui-header">
+			<h2 class="ui-title">Configuration</h2>
+		</header>
+
+		<div class="ui-content">
+			<label>IP address of AV:</label>
+			<div>
+				<input type="number" id="input_hostip_1" class="input-ip" value="192">
+				.<input type="number" id="input_hostip_2" class="input-ip" value="168">
+				.<input type="number" id="input_hostip_3" class="input-ip" value="1">
+				.<input type="number" id="input_hostip_4" class="input-ip">
+			</div>
+			<footer class="ui-footer ui-bottom-button">
+				<a id="saveConfig" href="#" class="ui-btn">Save</a>
+			</footer>
+        </div>
+	</div>
+	
+	<!-- Error connecting popup  -->
+	<div id="errorPopup" class="ui-popup">
+	   <div class="ui-popup-content">
+			Unable to connect to your Yamaha AV. 
+			Update configuration or exit ?
+	   </div>
+	   <div class="ui-popup-footer ui-grid-col-2 ui-side-button">
+	      <a id="cancelConnect" href="#" class="ui-btn btn-icon-cancel">Cancel</a>
+	      <a href="#config" class="ui-btn btn-icon-check">OK</a>
+	   </div>
+	</div>
+	
+	<!-- Input selection page -->
+	<div class="ui-page" id="input">
+		<header class="ui-header">
+			<h2 class="ui-title">Select input</h2>
+		</header>
+
+		<div class="ui-content">
+			<ul id="input_list" class="ui-listview">
+			</ul>
+        </div>
+
+	</div>
+	
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js" data-build-remove="false"></script>
+	<script type="text/javascript" src="js/yamaha.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

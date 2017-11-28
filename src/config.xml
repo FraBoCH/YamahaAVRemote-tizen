@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://bochatay.org/YamahaAVRemote" version="1.1.0" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="ZPvHqVSmRs.YamahaAVRemote" package="ZPvHqVSmRs" required_version="2.3.2"/>
+    <author email="frabo@windowslive.com">Frabo</author>
+    <content src="index.html"/>
+    <description>This is a remote application for connected Yamaha AV Receiver.&#xD;
+It has been built for RX-V675 but should work on other similar devices.&#xD;
+Features are: &#xD;
+- Power on/off&#xD;
+- Change volume using circular bezel&#xD;
+- Mute by clicking on volume label&#xD;
+- Change input&#xD;
+You'll need to enter the IP of your Yamaha Controller in the app preferences. If you don't know it, you can use the Yamaha smartphone application to find it.&#xD;
+This app is not developped by nor officially supported by Yamaha.</description>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <feature name="tizen.org/feature/input.rotating_bezel"/>
+    <feature name="tizen.org/feature/network.bluetooth"/>
+    <feature name="tizen.org/feature/network.wifi"/>
+    <feature name="tizen.org/feature/screen.shape.circle"/>
+    <icon src="logo-yamaha.png"/>
+    <name xml:lang="en">Yamaha AV Remote</name>
+    <name>Yamaha AV Remote</name>
+    <preference name="hostIP" value="192.168.1.x" readonly="false"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
+</widget>

@@ -1,0 +1,36 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#222;
+}
+
+.input-ip {
+	width: 60px;
+}
+
+.btn-icon-check::before {
+	background-color: rgba(245, 245, 245, 1);
+	-webkit-mask-image: url(./tw_ic_popup_btn_check.png);
+ }
+.btn-icon-cancel::before {
+	background-color: rgba(245, 245, 245, 1);
+	-webkit-mask-image: url(./tw_ic_popup_btn_delete.png);
+ }
+ 
+ .ui-listview li.li-has-radio label {
+	display: block;
+	margin-top: -17px;
+	margin-bottom: -17px;
+	margin-left: -40px;
+	margin-right: -40px;	
+	padding: 17px 100px 17px 30px;
+}
+.ui-listview li input[type="radio"] {
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	-webkit-transform: translate3d(0, -50%, 0);
+}
