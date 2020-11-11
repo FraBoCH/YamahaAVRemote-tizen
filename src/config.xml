@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://bochatay.org/YamahaAVRemote" version="1.1.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://bochatay.org/YamahaAVRemote" version="1.1.1" viewmodes="maximized">
     <access origin="*" subdomains="true"></access>
     <tizen:application id="ZPvHqVSmRs.YamahaAVRemote" package="ZPvHqVSmRs" required_version="2.3.2"/>
-    <author email="frabo@windowslive.com">Frabo</author>
+    <author email="fraboch@outlook.com">Frabo</author>
     <content src="index.html"/>
-    <description>This is a remote application for connected Yamaha AV Receiver.&#xD;
-It has been built for RX-V675 but should work on other similar devices.&#xD;
-Features are: &#xD;
-- Power on/off&#xD;
-- Change volume using circular bezel&#xD;
-- Mute by clicking on volume label&#xD;
-- Change input&#xD;
-You'll need to enter the IP of your Yamaha Controller in the app preferences. If you don't know it, you can use the Yamaha smartphone application to find it.&#xD;
+    <description>This is a remote application for connected Yamaha AV Receiver.
+It has been built for RX-V675 but should work on other similar devices.
+Features are: 
+- Power on/off
+- Change volume using circular bezel
+- Mute by clicking on volume label
+- Change input
+You'll need to enter the IP of your Yamaha Controller in the app preferences. If you don't know it, you can use the Yamaha smartphone application to find it.
 This app is not developped by nor officially supported by Yamaha.</description>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
     <feature name="tizen.org/feature/input.rotating_bezel"/>
